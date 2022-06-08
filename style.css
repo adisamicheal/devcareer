@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  color: #212226;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.profile-image {
+  background: url('./images/bg.svg') #0fc598;
+  background-size: cover;
+  padding: 0 0 3em;
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.image-container {
+  width: 100%;
+  margin: 0rem auto 0;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0.4rem #fff;
+  animation: zoom 1s ease 1 forwards;
+  border-radius: 3px;
+}
+
+.profile-image .name {
+  font-size: 2rem;
+  margin: 1.5rem 0 0rem;
+  color: #212226;
+}
+
+.btn {
+  background: #fff;
+  display: block;
+  align-self: center;
+  margin: 0em auto;
+  padding: 0.8rem 4rem;
+  text-decoration: none;
+  color: #161313;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.sponsor {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sponsor a {
+  color: #a7a2a2;
+  display: block;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s linear;
+}
+
+.sponsor a span {
+  margin: 0 0.3rem;
+  color: orange;
+}
+
+.sponsor a svg {
+  width: 15px;
+  margin-right: 0.5rem;
+  transition: 0.3s linear;
+}
+
+.sponsor a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sponsor a:hover svg {
+  transform: translateX(-3px);
+}
+
+.profile-details .name {
+  width: 90%;
+  margin: auto;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.skills {
+  margin: 4rem auto;
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  border-bottom: 4px solid #0fc598;
+  width: 90%;
+  padding-bottom: 1.5rem;
+}
+
+.skill-item {
+  margin: 0 0.3rem;
+}
+
+.skill-item a {
+  text-decoration: none;
+  background: #324e61;
+  color: #fff;
+  padding: 0.5rem 0.4rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  transition: 0.3s ease-in-out;
+  display: block;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.skill-item a:hover {
+  position: relative;
+  transform: rotate(10deg);
+}
+
+.profile-details p {
+  width: 90%;
+  margin: 0 auto;
+  color: #797474;
+  line-height: 24px;
+  margin-bottom: 1rem;
+}
+
+.social {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.social h4 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+}
+
+.icon {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.icon:nth-child(1) {
+  border: 1px solid #3b5998;
+}
+
+.icon:nth-child(2) {
+  border: 1px solid #333;
+}
+.icon:nth-child(3) {
+  border: 1px solid red;
+}
+.icon:nth-child(4) {
+  border: 1px solid #0e76a8;
+}
+.icon:nth-child(5) {
+  border: 1px solid #00acee;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+  margin-top: 0.3rem;
+  transition: 0.3s ease-in;
+}
+
+.icon:hover svg {
+  transform: scale(1.2);
+}
+
+.theme-switcher {
+  position: fixed;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  top: 0.5rem;
+  transition: all 0.3s;
+}
+
+.theme-switcher:hover {
+  transform: scale(0.9);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 375px) {
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 425px) {
+  .profile-image {
+    height: 100%;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  .icon {
+    height: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-image {
+    padding-top: 3rem;
+  }
+
+  .image-container {
+    width: 60%;
+    margin: 0rem auto 0;
+  }
+
+  .profile-image .name {
+    display: none;
+  }
+
+  .btn {
+    width: 60%;
+    margin-top: 2rem;
+  }
+
+  .sponsor {
+    box-shadow: none;
+  }
+
+  .sponsor a {
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
+  .profile-details .name {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 990px) {
+  body {
+    flex-direction: row;
+  }
+
+  .profile-image {
+    height: 100vh;
+  }
+
+  .image-container {
+    width: 60%;
+  }
+
+  .btn {
+    margin-top: -17rem;
+    width: 60%;
+  }
+
+  .skills {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-item a {
+    font-size: 0.9rem;
+  }
+
+  .skill-item a:hover {
+    transform: scale(1.1);
+  }
+
+  .profile-details p {
+    margin-top: 0;
+  }
+}
+
+/* *** Dark Mode Styling *** */
+body.dark,
+body.dark .profile-image {
+  background: #212226;
+  color: #a39f9f;
+}
+
+body.dark .profile-image {
+  border-right: 1px solid #333;
+}
+
+body.dark .btn {
+  background: #212226;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.dark .btn:hover {
+  background: #333;
+  border-color: #333;
+  transform: translateY(2px);
+}
+
+body.dark .name {
+  color: #a7a2a2;
+}
+
+body.dark .sponsor a svg path {
+  fill: #797474;
+}
+
+body.dark .sponsor a:hover {
+  color: #797474;
+}
+
+body.dark .skills {
+  border-bottom: 4px solid #333;
+}
+
+body.dark .skill-item a {
+  background: #1e2020;
+  color: #a7a2a2;
+  border: 1px solid #333;
+}
+
+body.dark .icon {
+  border-color: #333;
+}
+
+body.dark .icon.github svg path {
+  fill: #fff;
+}
+
+body.dark .theme-switcher {
+  background: #eee;
+  color: #000;
+}
